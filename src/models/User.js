@@ -9,5 +9,10 @@ module.exports = mongoose.model('User', {
     discord_id: {
         type: String,
         required: true
+    },
+
+    level: {
+        type: Number,
+        default: 1
     }
 });
