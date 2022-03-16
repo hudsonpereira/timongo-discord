@@ -14,6 +14,7 @@
     "discord-reply": "^0.1.2",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
+    "mongoose": "^6.2.6",
     "nodemon": "^2.0.15"
   }
 }
