@@ -44,9 +44,11 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on('interactionCreate', async interaction => {
-	if (!interaction.isSelectMenu()) return;
-	
-	await interaction.update({ content: 'You have selected a menu, good job!', components: [] });
+	if (!interaction.isSelectMenu()) {
+		return;
+	}
+	const command = client.commands.get(interaction.message.interaction.commandName)
+	await command.replyHandler(interaction)
 });
 
 client.login(token);
