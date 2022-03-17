@@ -88,5 +88,11 @@ userSchema.virtual('maxEnergy').get(function() {
     return this.level * 10 + this.constitution * 3;
 });
 
+userSchema.virtual('damage').get(function() {
+    // if the user doesn't have a weapon
+    if (true) return this.level * this.strength * Math.floor(Math.random() * 2);
+
+});
+
 
 module.exports = mongoose.model('User', userSchema)
