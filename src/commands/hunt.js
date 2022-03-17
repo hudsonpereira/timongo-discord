@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageButton, MessageEmbed, Integration } = require('discord.js');
 
-const creatures = require('../creatures');
+
 const { create } = require('../models/User');
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
 		.setDescription('Hunts a creature!'),
 	async execute(interaction) {
         const User = require('../models/User')
-
+        const creatures = require('../creatures')()
         const user = await User.findOne({
             discord_id: interaction.member.id
         })
