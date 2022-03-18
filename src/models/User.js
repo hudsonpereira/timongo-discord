@@ -70,6 +70,8 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 13
     },
+}, {
+    timestamps: true
 });
 
 userSchema.virtual('toNextLevel').get(function() {
